@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 300px 9fr;
+}

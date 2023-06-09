@@ -1,6 +1,9 @@
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
+import Header from '@/components/header/Header'
+import Sidebar from '@/components/sidebar/Sidebar'
+
 import './globals.scss'
 
 const inter = Inter({
@@ -33,7 +36,15 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				<div className='h-screen overflow-hidden'>
+					<Header />
+					<div className='wrapper'>
+						<Sidebar />
+						<main className='bg-slate-300'>{children}</main>
+					</div>
+				</div>
+			</body>
 		</html>
 	)
 }

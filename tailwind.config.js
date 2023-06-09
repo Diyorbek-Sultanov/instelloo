@@ -52,6 +52,10 @@ module.exports = {
 					display: 'flex',
 					alignItems: 'center',
 					justifyContent: 'space-between'
+				},
+				'.flex-center': {
+					display: 'flex',
+					alignItems: 'center'
 				}
 			}),
 				addComponents({
