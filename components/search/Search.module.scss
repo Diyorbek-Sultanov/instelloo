@@ -1,0 +1,9 @@
+.search {
+	@apply w-[340px] relative;
+
+	.searchIcon {
+		@apply absolute right-5 cursor-pointer;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}

@@ -24,7 +24,8 @@ export const metadata: Metadata = {
 		type: 'website',
 		title: 'Instelloo',
 		description: 'this is instagram clone name instelloo',
-		siteName: 'Instelloo'
+		siteName: 'Instelloo',
+		url: process.env.SITE_URL
 	},
 	viewport: { width: 'width=device-width', initialScale: 1 }
 }
