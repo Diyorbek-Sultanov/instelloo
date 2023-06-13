@@ -1,0 +1,15 @@
+.menu {
+	@apply flex-center gap-9 relative text-center;
+
+	.drop {
+		@apply opacity-0 pointer-events-none bg-white shadow-lg absolute top-[5rem] right-0 rounded-md py-2 px-5 w-[320px] h-[350px] transition-all duration-300;
+
+		&.open {
+			@apply opacity-100 pointer-events-auto top-[4.4rem];
+		}
+	}
+
+	.user {
+		@apply relative w-[35px] h-[35px] flex items-center justify-center bg-pink cursor-pointer rounded-full;
+	}
+}

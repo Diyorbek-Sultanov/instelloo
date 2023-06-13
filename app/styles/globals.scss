@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	color: #333;
+}
+
 .wrapper {
 	display: grid;
 	grid-template-columns: 300px 9fr;

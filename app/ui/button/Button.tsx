@@ -10,9 +10,9 @@ const Button: FC<PropsWithChildren<IButton>> = ({
 	...rest
 }) => {
 	return (
-		<Button type={type} className={clsx('', className)} {...rest}>
+		<button type={type} className={clsx('', className)} {...rest}>
 			{children}
-		</Button>
+		</button>
 	)
 }
 
