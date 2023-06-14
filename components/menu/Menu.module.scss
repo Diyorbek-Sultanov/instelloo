@@ -10,6 +10,22 @@
 	}
 
 	.user {
-		@apply relative w-[35px] h-[35px] flex items-center justify-center bg-pink cursor-pointer rounded-full;
+		@apply relative w-[35px] h-[35px] flex items-center justify-center bg-slate-300 cursor-pointer rounded-full;
+
+		.userMenu {
+			@apply opacity-0 pointer-events-none absolute bg-white shadow-lg rounded-md py-2 px-5 w-[280px] max-h-[230px] top-[5rem] transition-all;
+
+			&.open {
+				@apply opacity-100 pointer-events-auto top-[4.4rem];
+			}
+
+			ul {
+				@apply flex flex-col gap-y-1;
+
+				li {
+					@apply flex-center gap-5 rounded-md p-1 hover:bg-orange-400 hover:text-white;
+				}
+			}
+		}
 	}
 }

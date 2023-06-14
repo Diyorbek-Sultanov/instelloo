@@ -8,6 +8,7 @@ import { BiUser } from 'react-icons/bi'
 
 import styles from './Menu.module.scss'
 
+import UserMenu from './UserMenu'
 import { useOutSide } from '@/app/hooks/useOutSide'
 import { useSelectedImg } from '@/app/hooks/useSelectedImg'
 import Button from '@/app/ui/button/Button'
@@ -74,9 +75,7 @@ const Menu: FC = () => {
 					Choose file
 				</Button>
 			</div>
-			<div className={styles.user}>
-				<BiUser fontSize={22} fill='white' />
-			</div>
+			<UserMenu />
 		</div>
 	)
 }
