@@ -1,3 +1,35 @@
 .sidebar {
-	@apply w-[300px] h-screen;
+	@apply w-[300px] h-screen py-4 px-4 border-t-2 sticky top-[10rem] left-0;
+
+	.avatar {
+		@apply flex flex-col items-center mb-6 border-b;
+
+		.img {
+			@apply relative w-[95px] h-[95px] rounded-full  border-2 border-pink;
+		}
+
+		.name {
+			@apply text-textColor block text-lg font-medium mt-5;
+		}
+
+		.info {
+			@apply flex-center-between w-full mt-6 pb-4;
+
+			> div {
+				@apply flex flex-col text-center;
+			}
+		}
+	}
+
+	.menu {
+		@apply pl-4 flex flex-col gap-y-9;
+
+		.li {
+			@apply flex-center gap-5;
+
+			&.active {
+				@apply text-pink border-r-4 border-pink;
+			}
+		}
+	}
 }

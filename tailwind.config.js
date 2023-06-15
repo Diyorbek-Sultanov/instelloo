@@ -13,7 +13,7 @@ module.exports = {
 			colors: {
 				pink: '#DB2777',
 				textColor: '#333',
-				title: '#111827',
+				titleColor: '#111827',
 				iconColor: '#707070',
 				sidebarIconColor: '#BE185D'
 			},
