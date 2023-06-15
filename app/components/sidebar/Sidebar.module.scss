@@ -1,5 +1,5 @@
 .sidebar {
-	@apply w-[300px] h-screen py-4 px-4 border-t-2 sticky top-[10rem] left-0;
+	@apply w-[300px] h-screen py-4 px-4 border-t-2 sticky;
 
 	.avatar {
 		@apply flex flex-col items-center mb-6 border-b;
@@ -25,10 +25,10 @@
 		@apply pl-4 flex flex-col gap-y-9;
 
 		.li {
-			@apply flex-center gap-5;
+			@apply flex-center gap-5 hover:text-pink hover:border-r-4 hover:border-pink transition-all;
 
 			&.active {
-				@apply text-pink border-r-4 border-pink;
+				@apply text-pink border-r-4 border-pink font-semibold;
 			}
 		}
 	}

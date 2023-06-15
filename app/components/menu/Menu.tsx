@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { FC } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import { BiUser } from 'react-icons/bi'
+import { BsSun } from 'react-icons/bs'
 
 import styles from './Menu.module.scss'
 
@@ -19,6 +20,9 @@ const Menu: FC = () => {
 
 	return (
 		<div className={styles.menu}>
+			<div className='bg-orange-100 p-3 rounded-full'>
+				<BsSun className='cursor-pointer' fontSize={20} />
+			</div>
 			<Button
 				className='btn-pink w-[94px] h-[40px] py-2 px-5'
 				onClick={() => setIsShow(true)}

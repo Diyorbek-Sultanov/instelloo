@@ -42,7 +42,7 @@ export default function RootLayout({
 					<Header />
 					<div className='wrapper'>
 						<Sidebar />
-						<main className='bg-slate-300'>{children}</main>
+						<main className='bg-slate-300 flex-grow'>{children}</main>
 					</div>
 				</div>
 			</body>
