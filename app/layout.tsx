@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import './styles/globals.scss'
-import Header from '@/app/components/header/Header'
-import Sidebar from '@/app/components/sidebar/Sidebar'
+import Header from '@/app/components/layout/header/Header'
+import Sidebar from '@/app/components/layout/sidebar/Sidebar'
 
 const inter = Inter({
 	subsets: ['latin'],
@@ -40,9 +40,13 @@ export default function RootLayout({
 			<body className={inter.className}>
 				<div className='h-screen overflow-hidden'>
 					<Header />
-					<div className='wrapper'>
+					<div className='flex'>
 						<Sidebar />
-						<main className='bg-slate-300 flex-grow'>{children}</main>
+						<main className='main h-full'>
+							<section className='h-full max-w-[1310px] mx-auto pt-7'>
+								{children}
+							</section>
+						</main>
 					</div>
 				</div>
 			</body>

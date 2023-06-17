@@ -2,13 +2,19 @@ import Image from 'next/image'
 
 import styles from './Header.module.scss'
 
-import Menu from '../menu/Menu'
-import Search from '../search/Search'
+import Menu from './menu/Menu'
+import Search from './search/Search'
 
 const Header = () => {
 	return (
 		<header className={styles.header}>
-			<Image src={'/images/logo.png'} alt='logo' width={150} height={150} />
+			<Image
+				src={'/images/logo.png'}
+				alt='logo'
+				priority
+				width={150}
+				height={150}
+			/>
 			<Search />
 			<Menu />
 		</header>

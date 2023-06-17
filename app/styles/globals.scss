@@ -6,7 +6,10 @@ body {
 	color: #333;
 }
 
-.wrapper {
-	display: grid;
-	grid-template-columns: 300px 9fr;
+.main {
+	width: calc(100% - 300px);
+	min-height: calc(100vh - 80px);
+	position: absolute;
+	top: 80px;
+	right: 0;
 }

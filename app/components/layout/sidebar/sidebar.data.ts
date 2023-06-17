@@ -2,14 +2,9 @@ import { ISidebarData } from './sidebar.types'
 
 export const sidebarData: ISidebarData[] = [
 	{
-		icon: 'BsHouseFill',
-		label: 'Home',
-		route: '/'
-	},
-	{
 		icon: 'BsFillGridFill',
 		label: 'Feed',
-		route: '/feed'
+		route: '/'
 	},
 	{
 		icon: 'BsSearch',
