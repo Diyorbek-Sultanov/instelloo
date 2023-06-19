@@ -6,8 +6,7 @@
 	}
 
 	.post {
-		@apply rounded-md;
-		box-shadow: 0 3px 11px rgba(0, 0, 0, 0.4);
+		@apply rounded-md shadow-block;
 		min-height: auto;
 
 		.dot {
@@ -18,7 +17,7 @@
 			@apply flex-center gap-x-3 bg-slate-200 rounded-3xl py-1 px-2 min-w-[90px] justify-center;
 
 			.likeItem {
-				@apply flex-center gap-x-1 first:border-r-2 first:border-zinc-400 first:pr-1;
+				@apply flex-center gap-x-1 first:border-r-2 first:border-zinc-400 first:pr-2;
 			}
 
 			svg {
@@ -36,6 +35,14 @@
 
 		.comments {
 			@apply border-t-2 pt-4 mb-6;
+		}
+	}
+
+	.side {
+		@apply flex flex-col gap-y-5;
+
+		.follow {
+			@apply rounded-md shadow-block p-4;
 		}
 	}
 }

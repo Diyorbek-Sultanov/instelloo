@@ -44,7 +44,10 @@ module.exports = {
 				sladeInUp: 'sladeInUp .3s ease-in-out'
 			},
 			gridTemplateColumns: {
-				rootGrid: '540px 370px'
+				rootGrid: '1fr 370px'
+			},
+			boxShadow: {
+				block: '0 3px 11px rgba(0, 0, 0, 0.4)'
 			}
 		}
 	},
