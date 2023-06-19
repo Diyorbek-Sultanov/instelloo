@@ -1,0 +1,13 @@
+.form {
+	.textarea {
+		@apply resize-none outline-none w-full border-2 rounded-md px-3 py-2 placeholder:text-sm text-base appearance-none overflow-hidden focus:border-purple-400 transition-colors mb-4;
+	}
+
+	.btn {
+		@apply w-[130px] bg-purple-500 text-white font-semibold rounded-md py-2 px-4 focus:outline-none;
+
+		&:focus {
+			box-shadow: 0 4px 8px rebeccapurple;
+		}
+	}
+}

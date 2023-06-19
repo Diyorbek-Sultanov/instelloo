@@ -1,3 +1,41 @@
 .home {
 	@apply h-full;
+
+	.wrapper {
+		@apply max-w-[1100px] mx-auto grid grid-cols-rootGrid gap-x-24;
+	}
+
+	.post {
+		@apply rounded-md;
+		box-shadow: 0 3px 11px rgba(0, 0, 0, 0.4);
+		min-height: auto;
+
+		.dot {
+			@apply w-[30px] h-[30px] rounded-full flex-center justify-center bg-zinc-200;
+		}
+
+		.likeWrap {
+			@apply flex-center gap-x-3 bg-slate-200 rounded-3xl py-1 px-2 min-w-[90px] justify-center;
+
+			.likeItem {
+				@apply flex-center gap-x-1 first:border-r-2 first:border-zinc-400 first:pr-1;
+			}
+
+			svg {
+				@apply cursor-pointer;
+			}
+		}
+
+		.comment {
+			@apply flex-center gap-x-3 relative;
+
+			> p {
+				@apply w-[25px] h-[25px] absolute top-[-1.5rem] right-[-18px] bg-purple-400 rounded-full flex-center justify-center;
+			}
+		}
+
+		.comments {
+			@apply border-t-2 pt-4 mb-6;
+		}
+	}
 }

@@ -42,6 +42,9 @@ module.exports = {
 			},
 			animation: {
 				sladeInUp: 'sladeInUp .3s ease-in-out'
+			},
+			gridTemplateColumns: {
+				rootGrid: '540px 370px'
 			}
 		}
 	},
