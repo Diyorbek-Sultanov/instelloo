@@ -6,7 +6,7 @@
 	}
 
 	.post {
-		@apply rounded-md shadow-block;
+		@apply shadow-block;
 		min-height: auto;
 
 		.dot {
@@ -42,7 +42,11 @@
 		@apply flex flex-col gap-y-5;
 
 		.follow {
-			@apply rounded-md shadow-block p-4;
+			@apply shadow-block p-4;
+		}
+
+		.latest {
+			@apply shadow-block p-4;
 		}
 	}
 }

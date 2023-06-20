@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 		siteName: 'Instelloo',
 		url: process.env.SITE_URL
 	},
-	viewport: { width: 'width=device-width', initialScale: 1 }
+	viewport: { width: 'device-width', initialScale: 1 }
 }
 
 export default function RootLayout({

@@ -62,6 +62,10 @@ module.exports = {
 				'.flex-center': {
 					display: 'flex',
 					alignItems: 'center'
+				},
+				'.shadow-block': {
+					boxShadow: '0 3px 11px rgba(0, 0, 0, 0.4)',
+					borderRadius: '5px'
 				}
 			}),
 				addComponents({
