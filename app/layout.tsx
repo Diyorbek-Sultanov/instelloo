@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
+import RootProvider from './providers/RootProvider'
 import './styles/globals.scss'
 import Header from '@/app/components/layout/header/Header'
 import Sidebar from '@/app/components/layout/sidebar/Sidebar'
@@ -38,17 +39,19 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={inter.className}>
-				<div className='h-screen overflow-hidden'>
-					<Header />
-					<div className='flex'>
-						<Sidebar />
-						<main className='main h-full'>
-							<section className='h-full max-w-[1310px] mx-auto pt-7'>
-								{children}
-							</section>
-						</main>
+				<RootProvider>
+					<div className='h-screen overflow-hidden'>
+						<Header />
+						<div className='flex'>
+							<Sidebar />
+							<main className='main h-full'>
+								<section className='h-full max-w-[1310px] mx-auto pt-7'>
+									{children}
+								</section>
+							</main>
+						</div>
 					</div>
-				</div>
+				</RootProvider>
 			</body>
 		</html>
 	)

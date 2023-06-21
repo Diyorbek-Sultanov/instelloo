@@ -1,12 +1,30 @@
 .modal {
 	@apply fixed top-0 right-0 left-0 bottom-0 z-[1001];
+	z-index: -1;
+
+	&.open {
+		z-index: 1001;
+
+		.overlay {
+			opacity: 1;
+		}
+
+		.content {
+			transform: translateY(0);
+			pointer-events: initial;
+			opacity: 1;
+		}
+	}
 
 	.overlay {
-		@apply bg-overlay h-screen flex-center justify-center;
+		@apply bg-overlay h-screen flex-center justify-center opacity-0 transition-opacity;
 	}
 
 	.content {
-		@apply w-[1200px] min-h-[700px] bg-white flex relative;
+		@apply w-[1200px] min-h-[700px] bg-white flex relative transition-all duration-300;
+		transform: translateY(200px);
+		pointer-events: none;
+		opacity: 0;
 
 		.close {
 			@apply bg-black w-[35px] h-[35px] rounded-full flex-center justify-center cursor-pointer absolute -top-6 -right-4;

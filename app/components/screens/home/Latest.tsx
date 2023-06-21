@@ -1,12 +1,21 @@
-import clsx from 'clsx'
+'use client'
+
 import Image from 'next/image'
-import { FC } from 'react'
+import { FC, useCallback } from 'react'
 
 import styles from './Home.module.scss'
 
 import { latestData } from './home.data'
+import { useActions } from '@/app/hooks/useActions'
 
 const Latest: FC = () => {
+	const { showModal } = useActions()
+
+	const handlClick = useCallback(() => {
+		showModal({ type: 'show' })
+		document.body.style.overflow = 'hidden'
+	}, [])
+
 	return (
 		<div className={styles.latest}>
 			<div className='flex-center-between mb-4'>
@@ -18,6 +27,7 @@ const Latest: FC = () => {
 					<div
 						className='max-w-full rounded-lg relative h-36 overflow-hidden cursor-pointer'
 						key={item.id}
+						onClick={handlClick}
 					>
 						<Image
 							className='object-cover rounded-lg'

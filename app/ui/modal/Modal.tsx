@@ -1,3 +1,6 @@
+'use client'
+
+import clsx from 'clsx'
 import Image from 'next/image'
 import { FC } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
@@ -10,12 +13,25 @@ import LikeCommet from '../like-commet/LikeCommet'
 import SmAvatar from '../small-avatar/SmAvatar'
 import AutoSizeTextArea from '../textArea/AutoSizeTextArea'
 
+import { useActions } from '@/app/hooks/useActions'
+import { useTypedSelector } from '@/app/hooks/useTypedSelector'
+
 const Modal: FC = () => {
+	const { hideModal } = useActions()
+	const { type } = useTypedSelector(state => state.modal)
+
 	return (
-		<div className={styles.modal}>
+		<div
+			className={clsx(styles.modal, {
+				[styles.open]: type === 'show'
+			})}
+		>
 			<div className={styles.overlay}>
 				<div className={styles.content}>
-					<div className={styles.close}>
+					<div
+						className={styles.close}
+						onClick={() => hideModal({ type: 'hide' })}
+					>
 						<AiOutlineClose fontSize={23} />
 					</div>
 					<div className='relative w-[65%] min-h-[700px] overflow-hidden'>
