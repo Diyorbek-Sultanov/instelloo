@@ -3,4 +3,6 @@ export type TypeSmAvatar = {
 	name: string
 }
 
-export interface IComAvatar extends Omit<TypeSmAvatar, 'name'> {}
+export interface IComAvatar extends Omit<TypeSmAvatar, 'name'> {
+	type: 'sm' | 'md'
+}

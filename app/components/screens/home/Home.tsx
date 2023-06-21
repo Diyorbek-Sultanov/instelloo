@@ -5,6 +5,7 @@ import styles from './Home.module.scss'
 import HomeSide from './HomeSide'
 import Post from './Post'
 import Heading from '@/app/ui/Heading'
+import Modal from '@/app/ui/modal/Modal'
 
 const Home: FC = () => {
 	return (
@@ -14,6 +15,7 @@ const Home: FC = () => {
 				<Post />
 				<HomeSide />
 			</div>
+			<Modal />
 		</div>
 	)
 }

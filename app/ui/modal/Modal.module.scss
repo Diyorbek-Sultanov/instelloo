@@ -1,0 +1,32 @@
+.modal {
+	@apply fixed top-0 right-0 left-0 bottom-0 z-[1001];
+
+	.overlay {
+		@apply bg-overlay h-screen flex-center justify-center;
+	}
+
+	.content {
+		@apply w-[1200px] min-h-[700px] bg-white flex relative;
+
+		.close {
+			@apply bg-black w-[35px] h-[35px] rounded-full flex-center justify-center cursor-pointer absolute -top-6 -right-4;
+
+			svg {
+				@apply fill-white;
+			}
+		}
+
+		.right {
+			@apply py-3 px-4;
+			width: calc(100% - 65%);
+
+			.dot {
+				@apply w-[30px] h-[30px] rounded-full flex-center justify-center bg-zinc-200;
+			}
+
+			.comments {
+				@apply h-[500px] overflow-y-auto;
+			}
+		}
+	}
+}
