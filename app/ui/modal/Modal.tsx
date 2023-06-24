@@ -18,7 +18,7 @@ import { useTypedSelector } from '@/app/hooks/useTypedSelector'
 
 const Modal: FC = () => {
 	const { hideModal } = useActions()
-	const { type } = useTypedSelector(state => state.modal)
+	const { type, imgUrl } = useTypedSelector(state => state.modal)
 
 	return (
 		<div
@@ -36,7 +36,7 @@ const Modal: FC = () => {
 					</div>
 					<div className='relative w-[65%] min-h-[700px] overflow-hidden'>
 						<Image
-							src={'/images/latest-1.jpg'}
+							src={imgUrl ? imgUrl : ''}
 							fill
 							alt='img'
 							className='object-cover'

@@ -34,7 +34,7 @@
 		}
 
 		.latest {
-			@apply shadow-block p-4;
+			@apply shadow-block p-4 max-h-fit;
 		}
 	}
 }

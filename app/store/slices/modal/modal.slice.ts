@@ -3,7 +3,8 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { TypeModalState } from './modal.types'
 
 const initialState: TypeModalState = {
-	type: 'hide'
+	type: 'hide',
+	imgUrl: ''
 }
 
 const modalSlice = createSlice({
@@ -12,6 +13,7 @@ const modalSlice = createSlice({
 	reducers: {
 		showModal: (state, action: PayloadAction<TypeModalState>) => {
 			state.type = action.payload.type
+			state.imgUrl = action.payload.imgUrl
 		},
 		hideModal: (state, action: PayloadAction<TypeModalState>) => {
 			state.type = action.payload.type

@@ -9,7 +9,7 @@ export const sidebarData: ISidebarData[] = [
 	{
 		icon: 'BsSearch',
 		label: 'Explore',
-		route: '/explore'
+		route: '/explorer'
 	},
 	{
 		icon: 'BsFillChatRightTextFill',
