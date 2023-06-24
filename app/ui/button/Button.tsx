@@ -10,7 +10,14 @@ const Button: FC<PropsWithChildren<IButton>> = ({
 	...rest
 }) => {
 	return (
-		<button type={type} className={clsx('', className)} {...rest}>
+		<button
+			type={type}
+			className={clsx(
+				'inline-block align-top cursor-pointer outline-none',
+				className
+			)}
+			{...rest}
+		>
 			{children}
 		</button>
 	)
