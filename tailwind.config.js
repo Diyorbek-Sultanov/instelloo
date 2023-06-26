@@ -38,10 +38,22 @@ module.exports = {
 						opacity: 1,
 						transform: 'translateY(0)'
 					}
+				},
+				'slide-fwd': {
+					'0%': {
+						'-webkit-transform': 'translateZ(0px)',
+						transform: 'translateZ(0px)'
+					},
+					'100%': {
+						'-webkit-transform': 'translateZ(160px)',
+						transform: 'translateZ(160px)'
+					}
 				}
 			},
 			animation: {
-				sladeInUp: 'sladeInUp .3s ease-in-out'
+				sladeInUp: 'sladeInUp .3s ease-in-out',
+				'slide-fwd':
+					' slide-fwd 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'
 			},
 			gridTemplateColumns: {
 				rootGrid: '1fr 370px'
