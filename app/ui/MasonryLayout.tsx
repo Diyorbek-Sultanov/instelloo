@@ -8,7 +8,7 @@ const MasonryLayout: FC<{ images: TypeExplorer[] }> = ({ images }) => {
 	return (
 		<div className='masonry-container'>
 			{images.map(image => (
-				<Pin key={image.id} image={image.image} />
+				<Pin key={image.id} image={image.image} sizes={image.type} />
 			))}
 		</div>
 	)
